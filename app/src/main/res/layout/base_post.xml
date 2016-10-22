@@ -1,41 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="16dp">
+    android:id="@+id/base_post"
+    android:background="#000"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+
+        >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        >
+        android:orientation="vertical"
+        android:background="#000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#7f9d20b9"
+            >
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/img_avatar"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tiozão"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#a42bd4"
+                android:textStyle="normal|bold"
+                android:textSize="18sp"
+                android:paddingLeft="5sp"
+                android:textAllCaps="false"
+                android:paddingTop="10sp"
+                android:id="@+id/nickname_post"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tiozão"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="?android:attr/colorControlActivated"
-            android:textStyle="normal|bold"
-            android:textSize="18sp" />
+            android:id="@+id/img_post"
+            android:drawingCacheQuality="auto"
+
+
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <RatingBar
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:isIndicator="false"
+                android:rating="0"
+                android:stepSize="1"
+                android:numStars="1"
+                android:layout_gravity="right"
+                android:id="@+id/rate_post"
+                android:background="#ffffff"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+
 
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-    <RatingBar
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        />
+    </android.support.v7.widget.CardView>
 
 
-</LinearLayout>
+
+
+</RelativeLayout>
